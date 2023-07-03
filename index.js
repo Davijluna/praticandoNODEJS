@@ -17,4 +17,4 @@ app.get("/blog", function(req, res) {
 app.listen(8081, function() {
   console.log('Servidor Rodando na url http://localhost:8081')
 });
-//  iniciando aula de node manutenção de rotas.
+//  iniciando aula de node manutenção de rotas utilizando parametros
