@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 
 app.get("/", function(req, res) {
-  res.send("Seja bem-vindo ao meu app !");
+  res.sendFile(__dirname + "/html/index.html");
 });
 
 app.get("/sobre", function(req, res) {
-  res.send("Minha pagina sobre");
+  res.sendFile(__dirname +"/html/sobre.html");
 });
 
 app.get("/blog", function(req, res) {
@@ -16,7 +16,7 @@ app.get("/blog", function(req, res) {
 // quando criamos o parâmetro obrigatóriamente precisa passar o parâmetro.
 // o send só pode coloca-lo uma vez se não ele dá erro.
 // instalado o nodemon.
-// como exibir arquivos HTML nas rotas 
+// como exibir arquivos HTML nas rotas  -> como reinderizar os arquivos HTML em nossas rotas.
 app.get("/ola/:nome/:cargo/:cor", function(req, res) {
   res.send("<h1>Olâ "+ req.params.nome + "</h1>" + "<h2>"+" você é um grande  "+ req.params.cargo+ "</h2>"+ "<h3>" + " sua cor é "+ req.params.cor+"</h3>")
 })
