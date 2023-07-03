@@ -16,6 +16,7 @@ app.get("/blog", function(req, res) {
 // quando criamos o parâmetro obrigatóriamente precisa passar o parâmetro.
 // o send só pode coloca-lo uma vez se não ele dá erro.
 // instalado o nodemon.
+// como exibir arquivos HTML nas rotas 
 app.get("/ola/:nome/:cargo/:cor", function(req, res) {
   res.send("<h1>Olâ "+ req.params.nome + "</h1>" + "<h2>"+" você é um grande  "+ req.params.cargo+ "</h2>"+ "<h3>" + " sua cor é "+ req.params.cor+"</h3>")
 })
