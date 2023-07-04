@@ -23,5 +23,8 @@
 
 -- Deletando registros no MySQL
 -- SEMPRE DELETE COM WHERE//////
-DELETE FROM usuarios >> se você deletar dessa forma toda a tabela será deletada.
-DELETE FROM usuarios WHERE nome = "Luiz Pereira";
+-- DELETE FROM usuarios >> se você deletar dessa forma toda a tabela será deletada.
+-- DELETE FROM usuarios WHERE nome = "Luiz Pereira";
+
+-- atualizando a tabela
+UPDATE usuarios SET email = "teste@email7" WHERE nome = "José Silva";
