@@ -16,7 +16,12 @@
 -- SELECT * FROM 
 
 -- lista um usuarios especifico 
-SELECT * FROM usuarios WHERE idade < 40;
+-- SELECT * FROM usuarios WHERE idade < 40;
 
 -- lista nome em string
-SELECT * FROM usuarios WHERE nome = "nome";
+-- SELECT * FROM usuarios WHERE nome = "nome";
+
+-- Deletando registros no MySQL
+-- SEMPRE DELETE COM WHERE//////
+DELETE FROM usuarios >> se você deletar dessa forma toda a tabela será deletada.
+DELETE FROM usuarios WHERE nome = "Luiz Pereira";
