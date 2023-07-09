@@ -46,6 +46,7 @@ Usuario.create({
 
 // Usuario.sync({force: true})
 
+// PAUSA PARA RESOLVER PENDÊNCIAS.
 
 // sequelize.authenticate().then(function() {
 //   console.log("Conectado com sucesso!")
