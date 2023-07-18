@@ -17,6 +17,8 @@ const Postagem = sequelize.define('postagens', {
   }
 })
 
+// INICIANDO PARA AULA DE HOJE.
+
 // Postagem.create({
 //   titulo: "Um titulo qualquer",
 //   conteudo: "Qualquer coisa"
