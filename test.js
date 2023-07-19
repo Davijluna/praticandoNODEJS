@@ -1,50 +1,61 @@
-// conectando a um banco de dados com sequelize
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize('test', 'root', '82523614', {
-  host:"localhost",
-  dialect: 'mysql'
-})
+const express = require("express");
+const app = express();j
 
-// como criar um model >> ele irá criar tabelas sem precisar digitar comandos de sql.
+app.listen(8081, function(){
+  console.log("Servidor Rodando na url http://localhost:8081");
+  })
 
-// 
-const Postagem = sequelize.define('postagens', {
-  titulo: {
-    type: Sequelize.STRING
-  },
-  conteudo: {
-    type: Sequelize.TEXT
-  }
-})
 
-// INICIANDO PARA AULA DE HOJE.
+// comentando tudo para um novo ponto de vista na aula.
 
-// Postagem.create({
-//   titulo: "Um titulo qualquer",
-//   conteudo: "Qualquer coisa"
+
+// // conectando a um banco de dados com sequelize
+// const Sequelize = require('sequelize')
+// const sequelize = new Sequelize('test', 'root', '82523614', {
+//   host:"localhost",
+//   dialect: 'mysql'
 // })
 
-const Usuario = sequelize.define('usuarios', {
-  nome: {
-    type: Sequelize.STRING
-  },
-  sobrenome: {
-    type: Sequelize.STRING
-  },
-  idade: {
-    type: Sequelize.INTEGER
-  },
-  email: {
-    type: Sequelize.STRING
-  }
-})
+// // como criar um model >> ele irá criar tabelas sem precisar digitar comandos de sql.
 
-Usuario.create({
-  nome: "Davi",
-  sobrenome: "Jesus",
-  idade: 34,
-  email: "email@test.com"
-})
+// // 
+// const Postagem = sequelize.define('postagens', {
+//   titulo: {
+//     type: Sequelize.STRING
+//   },
+//   conteudo: {
+//     type: Sequelize.TEXT
+//   }
+// })
+
+// // INICIANDO PARA AULA DE HOJE.
+
+// // Postagem.create({
+// //   titulo: "Um titulo qualquer",
+// //   conteudo: "Qualquer coisa"
+// // })
+
+// const Usuario = sequelize.define('usuarios', {
+//   nome: {
+//     type: Sequelize.STRING
+//   },
+//   sobrenome: {
+//     type: Sequelize.STRING
+//   },
+//   idade: {
+//     type: Sequelize.INTEGER
+//   },
+//   email: {
+//     type: Sequelize.STRING
+//   }
+// })
+
+// Usuario.create({
+//   nome: "Davi",
+//   sobrenome: "Jesus",
+//   idade: 34,
+//   email: "email@test.com"
+// })
 
 // Usuario.sync({force: true})
 
