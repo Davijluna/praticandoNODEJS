@@ -50,6 +50,9 @@ Usuario.create({
 
 // PAUSA PARA RESOLVER PENDÊNCIAS.
 
+// then() -> caso sucesso.
+// catch() -> caso erro.
+
 // sequelize.authenticate().then(function() {
 //   console.log("Conectado com sucesso!")
 // }).catch(function(erro) {
