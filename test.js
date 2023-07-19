@@ -56,5 +56,5 @@ Usuario.create({
 // sequelize.authenticate().then(function() {
 //   console.log("Conectado com sucesso!")
 // }).catch(function(erro) {
-//   console.log("Falha ao se conectar:" + erro)
+//   console.log("Falha ao se conectar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1:" + erro)
 // })
