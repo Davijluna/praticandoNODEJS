@@ -14,7 +14,14 @@ const Postagem = sequelize.define('postagens', {
   }
 })
 
-// Criando o model de Usuario.
+// Para iserir dados
+
+Postagem.create({
+  titulo: "teste de sequelize",
+  conteudo: "conteudo teste!!!!!!!!!!!!!!!!!!!!!!!!"
+})
+
+// Criando o model de Usuario. este tera Quatro campos nome, sobreNome, idade, email
 
 const Usuario = sequelize.define('usuarios', {
   nome: {
@@ -29,6 +36,15 @@ const Usuario = sequelize.define('usuarios', {
   email: {
     type: Sequelize.STRING
   }
+})
+
+// criando Usuario
+
+Usuario.create({
+  nome: "Davi",
+  sobreNome: "Jesus de Luna",
+  idade: 36,
+  email: "email@emailetc"
 })
 
 
