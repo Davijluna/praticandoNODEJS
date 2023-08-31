@@ -13,7 +13,6 @@ const Postagem = sequelize.define('postagens', {
     type: Sequelize.TEXT
   }
 })
-
 // Para iserir dados
 
 Postagem.create({
