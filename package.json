@@ -2,7 +2,7 @@
   "name": "nodeaula",
   "version": "1.0.0",
   "description": "testeNode",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
