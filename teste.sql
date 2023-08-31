@@ -1,5 +1,5 @@
 -- CREATE TABLE usuarios(
---   nome VARCHAR(50),
+--   nome VARCHAR(50),                          ESTE COMANDO CRIA UMA TABELA
 --   email VARCHAR(100),
 --   idade INT
 -- );
