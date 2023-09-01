@@ -1,6 +1,13 @@
 const express = require("express"); 
 const app = express();
 const handlebars = require('express-handlebars')
+// configurando a conxão com o Banco de Dados. 
+const Sequelize = require('sequelize')
+const sequelize = new Sequelize('test', 'root', '82523614', {
+  host: "localhost",
+  dialect: 'mysql'
+})
+
 
 // config
   // Template Engine
