@@ -25,7 +25,9 @@ const sequelize = new Sequelize('test', 'root', '82523614', {
   })
 
   app.post('/add', function(req, res) {
-    res.send('Formulário recebido!')
+    // req.body.conteudo
+    // res.send('teste Ok !!!!!!')
+    res.send("Texto:"+ req.body.titulo+ " Conteudo: "+ req.body.conteudo )
   })
 
 app.listen(8081, function() {
