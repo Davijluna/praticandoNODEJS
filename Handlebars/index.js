@@ -29,7 +29,8 @@ app.get('/', function(req, res) {
       titulo: req.body.titulo,
       conteudo: req.body.conteudo
     }).then(function() {
-      res.send("Post criado com sucesso!")
+      res.redirect('/')
+      // res.send("Post criado com sucesso!")
     }).catch(function(erro) {
       res.send("Houve um erro: " + erro)
     })
