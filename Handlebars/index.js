@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
-const Post = require('./models/Post')
+const Post = require('./models/Post.js')
 
 
 // config
@@ -17,9 +17,13 @@ const Post = require('./models/Post')
 // Rotas
 
 app.get('/', function(req, res) {
-  res.render('home', )
+  Post.all().then(function(posts) {
+    res.render('home', {nome: "Davi",sobreNome: "Jesus"}, posts)
+  }).catch(function(erro) {
+    res.send("teve um ERRo" + erro)
+  })
 })
-  app.get('/cad', function(req, res){
+  app.get('/cad', function(_req, res){
     // res.send('ROTA DE CADASTRO DE POST')
     res.render('formulario')
   })
