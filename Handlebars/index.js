@@ -21,10 +21,13 @@ const Post = require('./models/Post')
   })
 
   app.post('/add', function(req, res) {
-
     Post.create({
       titulo: req.body.titulo,
       conteudo: req.body.conteudo
+    }).then(function() {
+      res.send("Post criado com sucesso!")
+    }).catch(function(erro) {
+      res.send("Houve um erro: " + erro)
     })
     // req.body.conteudo
     // res.send('teste Ok !!!!!!')
