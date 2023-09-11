@@ -14,7 +14,11 @@ const Post = require('./models/Post')
     app.use(bodyParser.json())
   // configurando a conxão com o Banco de Dados. 
 
-// Rotas 
+// Rotas
+
+app.get('/', function(req, res) {
+  res.render('home', )
+})
   app.get('/cad', function(req, res){
     // res.send('ROTA DE CADASTRO DE POST')
     res.render('formulario')
