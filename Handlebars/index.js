@@ -18,15 +18,14 @@ const Post = require('./models/Post.js')
 
 app.get('/', function(req, res) {
   Post.all().then(function(posts) {
-    res.render('home', {nome: "Davi",sobreNome: "Jesus"}, posts)
-  }).catch(function(erro) {
-    res.send("teve um ERRo" + erro)
+    res.render('home', {nome: "David",sobreNome: "Jesus"})
   })
 })
   app.get('/cad', function(_req, res){
     // res.send('ROTA DE CADASTRO DE POST')
     res.render('formulario')
   })
+
 
   app.post('/add', function(req, res) {
     Post.create({
