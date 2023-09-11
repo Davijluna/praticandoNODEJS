@@ -21,9 +21,14 @@ const Post = require('./models/Post')
   })
 
   app.post('/add', function(req, res) {
+
+    Post.create({
+      titulo: req.body.titulo,
+      conteudo: req.body.conteudo
+    })
     // req.body.conteudo
     // res.send('teste Ok !!!!!!')
-    res.send("Texto:"+ req.body.titulo+ " Conteudo: "+ req.body.conteudo )
+    // res.send("Texto:"+ req.body.titulo+ " Conteudo: "+ req.body.conteudo )
   })
 
 app.listen(8081, function() {
