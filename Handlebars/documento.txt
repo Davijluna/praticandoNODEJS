@@ -1,0 +1,55 @@
+CRIANDO UM BANCO DE DADOS 
+
+CREATE DATABASE nomeDoBanco;
+
++++++++++++++++++++++++++++++
+PARA USAR O BANCO DE DADOS 
+
+USE nomeDoBanco;
+
+++++++++++++++++++++++++++++++
+MOSTRAR AS TABELAS
+
+SHOW TABLES;
+
+++++++++++++++++++++++++++++++
+MOSTRA O CONTEÚDO DA TABELA
+
+DESCRIBE nomeDaTabela;
+
+======================================================================================================
+
+UTILIZANDO HANDLEBARS.
+1 como instalar e configurar o HANDLEBARS.
+npm install --save express-handlebars
+
+2 confugurando o HANDLEBARS.
+com essas duas linhas de código nos falamos que usaremos o handlebars como template engine do nosso projeto.
+  app.engine('handlebars', handlebars({defaultLayout:'main'}))
+    app.set('view engine', 'handlebars')
+
+AULA > node.js - Como criar um formulário #20
+
+na parte para rodar o nodemon só rodou quando usei "handlebars.engine" na app.engine.
+link de onde resolvi o problema.
+https://stackoverflow.com/questions/69962757/typeerror-handlebars-is-not-a-function
+
+AULA > node.js - Como enviar dados do formulário #21
+nesta aula vamos preparar o backEnd para receber os dados do formulário.
+
+##### TIVE PROBLEMAS PARA ENCERRAR AS PORTAS E PESQUISEI E CONSEGUI COM ESSES COMNANDOS.
+
+netstat -tuln | grep 8081
+Identifique o processo que está usando a porta
+
+kill <PID>
+encerrá usando o comando kill. Substitua <PID> pelo PID real do processo
+
+fuser -k 8081/tcp
+Isso tentará encerrar qualquer processo que esteja usando
+
+sudo kill -9 <PID>
+
+
+
+Reinicie seu sistema: Se todas as tentativas anteriores não resolverem o problema, você pode considerar reiniciar o sistema. Isso encerrará todos os processos em execução e liberará todas as portas em uso. Certifique-se de salvar seu trabalho e preparar o sistema para uma reinicialização antes de prosseguir com esta opção.
