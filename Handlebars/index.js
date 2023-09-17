@@ -33,7 +33,7 @@ app.get('/', function(req, res) {
       conteudo: req.body.conteudo
     }).then(function() {
       res.redirect('/')
-      // res.send("Post criado com sucesso!")
+      // res.send("Post criado com sucesso!") está parte mostra na tela a informação que está em sed.
     }).catch(function(erro) {
       res.send("Houve um erro: " + erro)
     })
