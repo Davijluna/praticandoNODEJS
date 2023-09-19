@@ -7,7 +7,14 @@ const Post = require('./models/Post')
 
 // config
   // Template Engine
-    app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+  // Tive problemas para exibir os dados do banco na tela entâo este link me deu auxilio para exibir as postagens
+  // https://pt.stackoverflow.com/questions/466598/handlebars-access-has-been-denied-to-resolve-the-property-titulo-because-it-i
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main', 
+    runtimeOptions: {
+      allowProtoMethodsByDefault: true,
+      allowProtoPropertiesByDefault: true,
+    },
+  }))
     app.set('view engine', 'handlebars')
   // Body Parser
     app.use(bodyParser.urlencoded({extended: false}))
@@ -19,7 +26,7 @@ const Post = require('./models/Post')
 app.get('/', function(req, res) {
   Post.findAll().then(function(posts) {
     console.log('Registros encontrados:', posts);
-    res.render('home', {pos: posts})
+    res.render('home', { posts: posts })
   }).catch(function(error) {
     console.error('Erro ao buscar registros:', error); // Adicione este log
     res.status(500).send('Erro ao buscar registros');

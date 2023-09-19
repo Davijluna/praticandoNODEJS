@@ -11,9 +11,9 @@ const Post = db.sequelize.define('postagens', {
   }
 });
 
-Post.all = function() {
-  return Post.findAll();
-};
+// Post.all = function() {
+//   return Post.findAll();
+// };
 
 module.exports = Post;
 
