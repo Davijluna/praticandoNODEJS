@@ -57,6 +57,14 @@ app.get('/', function(req, res) {
     // res.send("Texto:"+ req.body.titulo+ " Conteudo: "+ req.body.conteudo )
   })
 
+  app.get('/deletar/:id', function(req, res) {
+    Post.destroy({where: {'id': req.params.id}}).then(function() {
+      res.send("postagem deletada com sucesso!")
+    }).catch(function(erro) {
+      res.send("Erro ao deletar ", erro)
+    })
+  })
+
 app.listen(8081, function() {
   console.log('Servidor Rodando na url http://localhost:8081')
 });
