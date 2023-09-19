@@ -1,5 +1,8 @@
 <h1>lista de Post:</h1>
   {{#each posts}}
+  <small>{{createdAt}}</small>
+  <p><small>{{updatedAt}}</small></p>
     <h2>titulo: {{titulo}}</h2>
-    <h2>conteudo: {{conteudo}}</h2>
+    <p>conteudo: {{conteudo}}</p>
+    <hr>
   {{/each}}

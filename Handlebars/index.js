@@ -17,6 +17,7 @@ const Post = require('./models/Post')
       allowProtoPropertiesByDefault: true,
     },
   }))
+
     app.set('view engine', 'handlebars')
   // Body Parser
     app.use(bodyParser.urlencoded({extended: false}))
@@ -26,7 +27,7 @@ const Post = require('./models/Post')
 // Rotas
 
 app.get('/', function(req, res) {
-  Post.findAll().then(function(posts) {
+  Post.findAll({order: [['id', 'DESC']]}).then(function(posts) {
     console.log('Registros encontrados:', posts);
     res.render('home', { posts: posts })
   }).catch(function(error) {
