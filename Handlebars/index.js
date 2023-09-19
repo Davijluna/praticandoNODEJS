@@ -9,6 +9,8 @@ const Post = require('./models/Post')
   // Template Engine
   // Tive problemas para exibir os dados do banco na tela entâo este link me deu auxilio para exibir as postagens
   // https://pt.stackoverflow.com/questions/466598/handlebars-access-has-been-denied-to-resolve-the-property-titulo-because-it-i
+
+  // http://www.prowebguru.com/2020/08/nodejs-express-handlebars-access-denied-resolve-property-solution/#.X595fFDQ9hE
     app.engine('handlebars', handlebars.engine({defaultLayout: 'main', 
     runtimeOptions: {
       allowProtoMethodsByDefault: true,
