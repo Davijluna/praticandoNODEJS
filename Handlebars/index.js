@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
-const Post = require('./models/Post.js')
+const Post = require('./models/Post')
 
 
 // config
@@ -17,10 +17,15 @@ const Post = require('./models/Post.js')
 // Rotas
 
 app.get('/', function(req, res) {
-  Post.all().then(function(posts) {
-    res.render('home', {nome: "David",sobreNome: "Jesus"})
+  Post.findAll().then(function(posts) {
+    console.log('Registros encontrados:', posts);
+    res.render('home', {pos: posts})
+  }).catch(function(error) {
+    console.error('Erro ao buscar registros:', error); // Adicione este log
+    res.status(500).send('Erro ao buscar registros');
+  });
   })
-})
+
   app.get('/cad', function(_req, res){
     // res.send('ROTA DE CADASTRO DE POST')
     res.render('formulario')
