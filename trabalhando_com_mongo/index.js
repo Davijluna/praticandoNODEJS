@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-
+// Trabalhando com o Mongoose #30
 //  Configurando o mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/aprendendo", {
