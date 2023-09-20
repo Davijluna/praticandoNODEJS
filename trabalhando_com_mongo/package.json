@@ -1,0 +1,14 @@
+{
+  "name": "trabalhando_com_mongo",
+  "version": "1.0.0",
+  "description": "trabalhando com mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davi",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.5.2"
+  }
+}
