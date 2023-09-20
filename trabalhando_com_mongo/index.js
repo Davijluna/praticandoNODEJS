@@ -46,11 +46,11 @@ mongoose.model('usuarios', UsuariosSchema)
 const Davi = mongoose.model('usuarios')
 
 new Davi({
-  nome: "Davi",
-  sobrenome: "Jesus de Luna",
-  email: "email@email.com",
-  idade: 36,
-  pais: "Brasil"
+  nome: "Maria",
+  sobrenome: "Almeida da Silva",
+  email: "maria@email.com",
+  idade: 42,
+  pais: "EUA"
 }).save().then(() => {
   console.log("Usuário criando com sucesso !!!")
 }).catch((err) => {
