@@ -3,6 +3,11 @@ const mongoose = require("mongoose")
 //  Configurando o mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/aprendendo", {
+  // link da solução:
+  // https://stackoverflow.com/questions/48031029/the-options-usemongoclient-is-not-supported
+
+  // link da documentação oficial
+  // https://mongoosejs.com/docs/connections.html
   // useMongoClient: true
   useNewUrlParser: true
 }).then(() => {
