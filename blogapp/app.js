@@ -9,7 +9,14 @@
   // Body Parser
     app.use(bodyParser.urlencoded({extended: true}))
     app.use(bodyParser.json())
-  
+  // Handlebars
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main', 
+      runtimeOptions: {
+      allowProtoMethodsByDefault: true,
+      allowProtoPropertiesByDefault: true,
+  },
+}))
+    app.set('view engine', 'handlebars');
 // Rotas
 
 // Outros
