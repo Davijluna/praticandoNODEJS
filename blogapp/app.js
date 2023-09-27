@@ -6,9 +6,7 @@
   const admin = require("./routes/admin")
   const path = require("path")
   const mongoose = require('mongoose')
-  require("./models/Categoria")
 
-  const Categoria = mongoose.model("categorias")
 
 // Configurações
   // Body Parser
