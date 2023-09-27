@@ -18,4 +18,8 @@ router.get("/categorias/add", (req, res) => {
   res.render("admin/addcategorias")
 })
 
+router.post("categorias/nova", (req, res) => {
+  
+})
+
 module.exports = router
