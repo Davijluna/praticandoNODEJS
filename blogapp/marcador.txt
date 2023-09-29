@@ -2,7 +2,7 @@ Grupo de rotas no Express.js #32
 Arquivos estáticos #33
 Formulário de categorias #34
 Definindo o model de categorias #35
-Aula  -- fazer correção pois não está salvando as categorias #36
+correção concluida #36
 
 ver status do mongo:
 
