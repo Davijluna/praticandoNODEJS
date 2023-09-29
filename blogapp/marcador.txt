@@ -4,6 +4,7 @@ Formulário de categorias #34
 Definindo o model de categorias #35
 Cadastrando categorias no banco de dados #36
 O que são sessões e cookies #37
+Middlewares #38
 
 ver status do mongo:
 
