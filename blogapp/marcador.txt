@@ -8,6 +8,7 @@ Middlewares #38
 Como configurar sessões #39
 Como validar formulário no Express.js #40
 Listando categorias #41
+Editando categoria #42
 
 ver status do mongo:
 
