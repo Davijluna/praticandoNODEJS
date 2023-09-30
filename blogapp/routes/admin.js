@@ -19,7 +19,6 @@ router.get("/categorias", (req, res) => {
     req.flash("error_msg", "Hove um erro ao listar as categorias")
     res.redirect("/admin")
   })
-  // res.send("Página de categorias")
 })
 
 router.get("/categorias/add", (req, res) => {
@@ -53,7 +52,6 @@ router.post("/categorias/nova", (req, res) => {
       }).catch((err) => {
         req.flash("error_msg", "Houve um erro ao salvar a categoria, tente novamente!")
         res.redirect("/admin")
-        // console.log("Erro ao salvar categoria !!!!!!!!!!!!!!!!!!!!!!!!!!!!"+err)
       })
   }
 })
@@ -66,7 +64,6 @@ router.get("/categorias/edit/:id", (req, res) => {
     res.redirect("/admin/categorias")
   })
 })
-
 
 router.post("/categorias/edit", (req, res) => {
   Categoria.findOne({_id: req.body.id}).then((categoria) => {
