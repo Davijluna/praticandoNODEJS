@@ -56,7 +56,12 @@ router.post("/categorias/nova", (req, res) => {
         // console.log("Erro ao salvar categoria !!!!!!!!!!!!!!!!!!!!!!!!!!!!"+err)
       })
   }
-
 })
+
+router.get("/categorias/edit/:id", (req, res) => {
+  res.send("Página de Edição de categorias")
+})
+
+
 
 module.exports = router
