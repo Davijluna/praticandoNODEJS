@@ -74,7 +74,7 @@ router.post("/categorias/edit", (req, res) => {
     categoria.slug = req.body.slug
 
     categoria.save().then(() => {
-      req.flash("sucess_msg", "Categoria editada com sucesso!")
+      req.flash("success_msg", "Categoria editada com sucesso!")
       res.redirect("/admin/categorias")
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro interno ao salvar a categoria")
