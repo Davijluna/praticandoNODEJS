@@ -80,7 +80,8 @@ router.post("/categorias/edit", (req, res) => {
       nome: req.body.nome,
       slug: req.body.slug
     }
-    Categoria.findOne({_id: req.body._id}).then((categoria) => {
+
+    Categoria.findOne({_id: req.body.id}).then((categoria) => {
       categoria.nome = req.body.nome
       categoria.slug = req.body.slug
       
