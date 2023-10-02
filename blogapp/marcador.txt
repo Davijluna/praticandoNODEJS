@@ -9,6 +9,8 @@ Como configurar sessões #39
 Como validar formulário no Express.js #40
 Listando categorias #41
 Editando categoria #42
+Deletando categorias #43
+Definindo model de postagens #44
 
 ver status do mongo:
 
