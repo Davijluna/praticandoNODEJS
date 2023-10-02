@@ -99,6 +99,8 @@ router.post("/categorias/edit", (req, res) => {
   }
 })
 
+
+
 router.post("/categorias/deletar", (req, res) => {
   Categoria.deleteOne({_id: req.body.id}).then(() => {
     req.flash("success_msg", "Categoria deletada com sucesso!")
