@@ -70,12 +70,17 @@ router.post("/categorias/edit", (req, res) => {
 
   if(!req.body.slug || typeof req.body.slug == undefined || req.body.slug == null) {
     erroEdit.push({texto: "Slug inválido"})
+
+    if(erroEdit.length > 0) {
+      res.render("admin/addcategorias", {erros: erroEdit});
+    }
+
   } else {
     const categoriaEdit = {
       nome: req.body.nome,
       slug: req.body.slug
     }
-    Categoria.findOne({_id: categoriaEdit}).then((categoria) => {
+    Categoria.findOne({_id: req.body._id}).then((categoria) => {
       categoria.nome = req.body.nome
       categoria.slug = req.body.slug
       
