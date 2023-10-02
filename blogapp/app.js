@@ -15,7 +15,7 @@
     app.use(session({
       secret:"cursodenode",
       resave: true,
-      saveUnitialized: true
+      saveUninitialized: true
     }))
     app.use(flash())
   // Middleware
