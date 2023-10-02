@@ -99,8 +99,10 @@ router.post("/categorias/edit", (req, res) => {
   }
 })
 
-
-
+// Em exercicio tive problemas para deletar pois a função "remove" na linha 105 não era reconhecida LINK que me ajudou a resolver.
+// https://stackoverflow.com/questions/75913878/problem-with-user-remove-it-says-that-it-is-not-a-function
+// Link da documentação Mangusto.
+// https://mongoosejs.com/docs/models.html#deleting
 router.post("/categorias/deletar", (req, res) => {
   Categoria.deleteOne({_id: req.body.id}).then(() => {
     req.flash("success_msg", "Categoria deletada com sucesso!")
