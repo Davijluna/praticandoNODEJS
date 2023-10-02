@@ -113,6 +113,4 @@ router.post("/categorias/deletar", (req, res) => {
   })
 })
 
-
-
 module.exports = router
