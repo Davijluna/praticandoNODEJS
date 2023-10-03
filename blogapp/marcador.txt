@@ -11,6 +11,7 @@ Listando categorias #41
 Editando categoria #42
 Deletando categorias #43
 Definindo model de postagens #44
+Formulário de postagens #45
 
 ver status do mongo:
 
