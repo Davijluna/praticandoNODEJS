@@ -24,8 +24,8 @@ const Postagem = new Schema({
     requiderd: true
   },
   data: {
-    type: DataTransfer,
-    default: Date.now()
+    type: Date,
+    default: Date.now
   }
 })
 
