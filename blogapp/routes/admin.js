@@ -4,7 +4,6 @@ const mongoose = require("mongoose")
 
 require("../models/Categoria")
 const Categoria = mongoose.model("categoria")
-
 require("../models/Postagem")
 const Postagem = mongoose.model("postagen")
 
@@ -65,7 +64,6 @@ router.get("/categorias/edit/:id", (req, res) => {
 })
 
 router.post("/categorias/edit", (req, res) => {
-
   var erroEdit = []
 
   if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
@@ -75,20 +73,18 @@ router.post("/categorias/edit", (req, res) => {
   if(!req.body.slug || typeof req.body.slug == undefined || req.body.slug == null) {
     erroEdit.push({texto: "Slug inválido"})
 
-    if(erroEdit.length > 0) {
-      res.render("admin/addcategorias", {erros: erroEdit});
-    }
-
-  } else {
-    const categoriaEdit = {
-      nome: req.body.nome,
-      slug: req.body.slug
-    }
+      if(erroEdit.length > 0) {
+        res.render("admin/addcategorias", {erros: erroEdit});
+      }
+      } else {
+      const categoriaEdit = {
+        nome: req.body.nome,
+        slug: req.body.slug
+      }
 
     Categoria.findOne({_id: req.body.id}).then((categoria) => {
       categoria.nome = req.body.nome
       categoria.slug = req.body.slug
-      
       categoria.save().then(() => {
         req.flash("success_msg", "Categoria editada com sucesso!")
         res.redirect("/admin/categorias")
@@ -102,7 +98,6 @@ router.post("/categorias/edit", (req, res) => {
     })
   }
 })
-
 // Em exercicio tive problemas para deletar pois a função "remove" na linha 105 não era reconhecida LINK que me ajudou a resolver.
 // https://stackoverflow.com/questions/75913878/problem-with-user-remove-it-says-that-it-is-not-a-function
 // Link da documentação Mangusto.
@@ -118,7 +113,6 @@ router.post("/categorias/deletar", (req, res) => {
 })
 
 router.get("/postagens", (req, res) => {
-
   Postagem.find().populate("categoria").sort({data: "desc"}).then((postagens) => {
     res.render("admin/postagens", {postagens: postagens})
   }).catch((err) => {
@@ -130,7 +124,6 @@ router.get("/postagens", (req, res) => {
 
 router.get("/postagens/add", (req, res) => {
   Categoria.find().then((categorias) => {
-
     res.render("admin/addpostagem", {categorias: categorias})
   }).catch((err) => {
     req.flash("error_msg", "Houve um erro ao carregar o formulário")
@@ -141,11 +134,9 @@ router.get("/postagens/add", (req, res) => {
 // está rota salva no banco de dados.
 router.post("/postagens/nova", (req, res) => {
   var erros = []
-
   if(req.body.Categoria == "0") {
     erros.push({texto: "Categoria inválida, registre uma cadegoria"})
   }
-
   if(erros.length > 0) {
     res.render("admin/addpostagens", {erros: erros});
   }else{
@@ -156,7 +147,6 @@ router.post("/postagens/nova", (req, res) => {
       conteudo: req.body.conteudo,
       categoria: req.body.categoria,
     }
-
     new Postagem(novaPostagem).save().then(() => {
       req.flash("success_msg", "Postagem criada com sucesso")
       res.redirect("/admin/postagens")
@@ -165,7 +155,10 @@ router.post("/postagens/nova", (req, res) => {
       res.redirect("/admin/postagens")
     })
   }
+})
 
+router.get("/postagens/edit/:id", (req, res) => {
+  res.render("admin/editpostagens")
 })
 
 module.exports = router
