@@ -8,13 +8,13 @@
     <form action="/admin/postagens/nova" method="post">
       <h4>Editar postagem:</h4>
       <label for="titulo">Titulo: </label>
-      <input type="text" name="titulo" class="form-control" required>
+      <input type="text" name="titulo" class="form-control" value="{{postagem.titulo}}" required>
       <label for="slug">Slug: </label>
-      <input type="text" name="slug" class="form-control" required>
+      <input type="text" name="slug" class="form-control" value="{{postagem.slug}}" required>
       <label for="descrição">Descrição: </label>
-      <input type="text" name="descricao" class="form-control" required>
+      <input type="text" name="descricao" class="form-control" value="{{postagem.descricao}}"  required>
       <label for="conteudo">Conteúdo: </label>
-      <textarea name="conteudo" class="form-control"></textarea>
+      <textarea name="conteudo" class="form-control">{{postagem.conteudo}}</textarea>
       <label for="categoria">categoria: </label>
       <select name="categoria" class="form-select">
         {{#each categorias}}

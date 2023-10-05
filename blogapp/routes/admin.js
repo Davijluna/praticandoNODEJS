@@ -158,7 +158,22 @@ router.post("/postagens/nova", (req, res) => {
 })
 
 router.get("/postagens/edit/:id", (req, res) => {
-  res.render("admin/editpostagens")
+  Postagem.findOne({_id: req.params.id}).then((postagem) => {
+
+    Categoria.find().then((categorias) => {
+      res.render("admin/editpostagens", {categorias: categorias, postagem: postagem})
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro ao listar as categorias")
+      res.redirect("/admin/postagens")
+    })
+
+  }).catch((err) => {
+    req.flash("error_msg", "Houve um erro ao carregar o formulário de edição")
+    res.redirect("admin/postagens")
+
+  })
+
+  
 })
 
 module.exports = router
