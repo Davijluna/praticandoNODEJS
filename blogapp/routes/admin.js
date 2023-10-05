@@ -3,10 +3,10 @@ const router = express.Router()
 const mongoose = require("mongoose")
 
 require("../models/Categoria")
-const Categoria = mongoose.model("categorias")
+const Categoria = mongoose.model("categoria")
 
 require("../models/Postagem")
-const Postagem = mongoose.model("postagens")
+const Postagem = mongoose.model("postagen")
 
 router.get('/', (req, res) => {
   res.render("admin/index")
@@ -118,7 +118,14 @@ router.post("/categorias/deletar", (req, res) => {
 })
 
 router.get("/postagens", (req, res) => {
-  res.render("admin/postagens")
+
+  Postagem.find().populate("categoria").sort({data: "desc"}).then((postagens) => {
+    res.render("admin/postagens", {postagens: postagens})
+  }).catch((err) => {
+    req.flash("error_msg", "Houve um erro ao listar as postagens", err)
+    res.redirect("/admin")
+  })
+
 })
 
 router.get("/postagens/add", (req, res) => {

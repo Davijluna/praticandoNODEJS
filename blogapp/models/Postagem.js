@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const Postagem = new Schema({
@@ -20,8 +20,8 @@ const Postagem = new Schema({
   },
   categoria: {
     type: Schema.Types.ObjectId,
-    ref: "categorias",
-    requiderd: true
+    ref: "categoria",
+    required: true
   },
   data: {
     type: Date,
@@ -29,4 +29,4 @@ const Postagem = new Schema({
   }
 })
 
-mongoose.model("postagens", Postagem )
+mongoose.model("postagen", Postagem)
