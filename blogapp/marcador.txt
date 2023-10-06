@@ -15,6 +15,7 @@ Formulário de postagens #45
 Salvando postagens no banco de dados #46
 Listando postagens #47
 Editando postagens #48
+Deletando postagens #49
 
 ver status do mongo:
 
