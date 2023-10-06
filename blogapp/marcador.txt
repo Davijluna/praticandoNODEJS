@@ -17,6 +17,7 @@ Listando postagens #47
 Editando postagens #48
 Deletando postagens #49
 Criando home page #50
+Proxima aula Página de postagem #51
 
 ver status do mongo:
 
