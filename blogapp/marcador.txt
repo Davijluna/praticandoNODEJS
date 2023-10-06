@@ -16,6 +16,7 @@ Salvando postagens no banco de dados #46
 Listando postagens #47
 Editando postagens #48
 Deletando postagens #49
+Criando home page #50
 
 ver status do mongo:
 
