@@ -19,6 +19,8 @@ Deletando postagens #49
 Criando home page #50
 Proxima aula Página de postagem #51
 
+=====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
+
 
 ver status do mongo:
 
