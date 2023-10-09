@@ -63,7 +63,7 @@
         })
       })
 
-      app.get("postagem/:slug", (req, res) => {
+      app.get("/postagem/:slug", (req, res) => {
         Postagem.findOne({slug: req.params.slug}).then((postagem) => {
           if(postagem) {
             res.render("postagem/index", {postagem: postagem})
@@ -71,6 +71,9 @@
             req.flash("error_msg", "Está postagem não existe")
             res.redirect("/")
           }
+        }).catch((err) => {
+          req.flash("error_mosg", "Houve um erro interno")
+          res.redirect("/")
         })
       })
 
