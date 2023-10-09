@@ -17,7 +17,8 @@ Listando postagens #47
 Editando postagens #48
 Deletando postagens #49
 Criando home page #50
-Proxima aula Página de postagem #51
+Página de postagem #51
+Próxima aula Listagem de categorias #52
 
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
