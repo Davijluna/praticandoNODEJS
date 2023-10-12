@@ -8,9 +8,14 @@
   const mongoose = require('mongoose')
   const session = require("express-session")
   const flash = require("connect-flash")
+
+  // model de Postagem
   require("./models/Postagem")
   const Postagem = mongoose.model("postagen")
 
+// model de Categorias
+require("./models/Categoria")
+const Categoria = mongoose.model("categoria")
 
 // Configurações
   // Sessão
@@ -83,6 +88,15 @@
 
       app.get('/posts', (req, res) => {
         res.send("Lista Posts")
+      })
+
+      app.get('/categorias', (req, res) => {
+        Categoria.find().then((categorias) => {
+
+        }).catch((err) => {
+          req.flash("error_msg", "Houve um erro interno ao listar categorias")
+          res.redirect("/")
+        })
       })
 
 
