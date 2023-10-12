@@ -92,7 +92,7 @@ const Categoria = mongoose.model("categoria")
 
       app.get('/categorias', (req, res) => {
         Categoria.find().then((categorias) => {
-
+          res.render("")
         }).catch((err) => {
           req.flash("error_msg", "Houve um erro interno ao listar categorias")
           res.redirect("/")
