@@ -60,7 +60,7 @@ const Categoria = mongoose.model("categoria")
 // Rotas
 
       app.get("/", (req, res) => {
-        Postagem.find().populate("categoria").sort({data: "desc"}).then((postagens) => {
+        Postagem.find().populate("categoria").sort({data:"desc"}).then((postagens) => {
           res.render('index', {postagens: postagens})
         }).catch((err) => {
           req.flash("error_msg", "Houve um erro")
