@@ -19,7 +19,7 @@ Deletando postagens #49
 Criando home page #50
 Página de postagem #51
 Listagem de categorias #52
-Próxima aula Definindo model de usuario #53
+Definindo model de usuario #53
 
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
