@@ -20,6 +20,7 @@ Criando home page #50
 Página de postagem #51
 Listagem de categorias #52
 Definindo model de usuario #53
+Próxima aula Registro de usuários #54
 
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
