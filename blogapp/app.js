@@ -13,9 +13,13 @@
   require("./models/Postagem")
   const Postagem = mongoose.model("postagen")
 
-// model de Categorias
-require("./models/Categoria")
-const Categoria = mongoose.model("categoria")
+  // model de Categorias
+  require("./models/Categoria")
+  const Categoria = mongoose.model("categoria")
+
+  // model de usuarios
+const usuarios = require("./routes/usuario")
+
 
 // Configurações
   // Sessão
@@ -121,6 +125,7 @@ const Categoria = mongoose.model("categoria")
 
 
   app.use('/admin', admin)
+  app.use('/usuarios', usuarios) // criando o grupo de rotas para usuarios
 // Outros
 const PORT = 8081
 app.listen(PORT, () => {
