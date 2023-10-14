@@ -24,6 +24,19 @@ Próxima aula Registro de usuários #54
 
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
+##### TIVE PROBLEMAS PARA ENCERRAR AS PORTAS E PESQUISEI E CONSEGUI COM ESSES COMNANDOS.
+
+netstat -tuln | grep 8081
+Identifique o processo que está usando a porta
+
+kill <PID>
+encerrá usando o comando kill. Substitua <PID> pelo PID real do processo
+
+fuser -k 8081/tcp
+Isso tentará encerrar qualquer processo que esteja usando
+
+sudo kill -9 <PID>
+
 
 ver status do mongo:
 
