@@ -18,7 +18,7 @@
   const Categoria = mongoose.model("categoria")
 
   // 
-const usuario = require("./routes/usuario")
+const usuarios = require("./routes/usuario")
 
 
 // Configurações
@@ -125,7 +125,7 @@ const usuario = require("./routes/usuario")
 
 
   app.use('/admin', admin)
-  app.use('/usuarios', usuario) // criando o grupo de rotas para usuarios
+  app.use('/usuarios', usuarios) // criando o grupo de rotas para usuarios
 // Outros
 const PORT = 8081
 app.listen(PORT, () => {
