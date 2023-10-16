@@ -40,12 +40,30 @@ router.post("/registro", (req, res) => {
     Usuario.findOne({email: req.body.email}).then((usuario) => {
       if(usuario) {
         req.flash("error_msg", "já existe uma conta com este e-mail no nosso sistema")
-        res.redirect("/registro")
+        res.redirect("/usuarios/registro")
       }else{
         const novoUsuario = new Usuario({
           nome: req.body.nome,
           email: req.body.email,
           senha: req.body.senha
+        })
+
+        bcrypt.genSalt(10, (erro, salt) => {
+          bcrypt.hash(novoUsuario.senha, salt, (erro, hash) => {
+           if(erro) {
+            req.flash("error_msg", "Houve um erro durante o salvamento do usuário")
+            res.redirect("/")
+           }
+           novoUsuario.senha = hash
+
+           novoUsuario.save().then(() => {
+            req.flash("success_msg", "Usuário criado com sucesso!")
+            res.redirect("/")
+           }).catch((err) => {
+            req.flash("error_msg", "Houve um erro ao criar o usuário tente novamente!")
+            res.redirect("/usuarios/registro")
+           })
+          })
         })
       }
     }).catch((err) => {
