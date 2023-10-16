@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-
+// Aqui fizemos o verificação para saber se o usuário é admin ou não.
 const Usuario = new Schema({
   nome: {
     type: String,
@@ -9,6 +9,10 @@ const Usuario = new Schema({
   email: {
     type: String,
     required: true
+  },
+  eAdmin: {
+    type: Number,
+    default: 0,
   },
   senha:{ 
     type:String,
