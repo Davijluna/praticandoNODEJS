@@ -23,6 +23,7 @@ Definindo model de usuario #53
 Registro de usuários #54
 Fazendo correção #55
 Cadastrando usuários no banco de dados #56
+ver todas essas aulas hoje #57 #58 #59 #60 com pausa de 20 min à dada 30 min. de aula
 Próxima aula Formuário de login #57
 
 
