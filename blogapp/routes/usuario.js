@@ -80,5 +80,11 @@ router.get("/login", (req, res) => {
   res.render("usuarios/login")
 })
 
+// Aula #59 Finalizando autenticação #59
+
+router.post("/login", (req, res, next) => {
+  
+})
+
 
 module.exports = router
