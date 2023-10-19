@@ -84,7 +84,11 @@ router.get("/login", (req, res) => {
 // Aula #59 Finalizando autenticação #59
 
 router.post("/login", (req, res, next) => {
-
+    passport.authenticate("local", {
+      successRedirect: "/",
+      failureRedirect:"/usuarios/login",
+      failureFlash: true
+    })(req, res, next)
 })
 
 
