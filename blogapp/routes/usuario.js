@@ -74,4 +74,11 @@ router.post("/registro", (req, res) => {
 
 })
 
+// Aula #57 Formuário de login
+
+router.get("/login", (req, res) => {
+  res.render("usuarios/login")
+})
+
+
 module.exports = router
