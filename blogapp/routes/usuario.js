@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 require("../models/Usuario")
 const Usuario = mongoose.model("usuarios")
 const bcrypt = require("bcryptjs")
+const passport = require("passport")
 
 router.get("/registro", (req, res) => {
   res.render("usuarios/registro")
@@ -83,7 +84,7 @@ router.get("/login", (req, res) => {
 // Aula #59 Finalizando autenticação #59
 
 router.post("/login", (req, res, next) => {
-  
+
 })
 
 
