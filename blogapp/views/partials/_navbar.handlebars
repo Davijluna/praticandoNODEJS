@@ -12,6 +12,8 @@
         <li class="nav-item">
           <a class="nav-link" href="/categorias">Categorias</a>
         </li>
+        {{#if user}}
+        {{else}}
 
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Login</a>
@@ -19,6 +21,7 @@
          <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Registro</a>
         </li>
+        {{/if}}
       </ul>
       
     </div>
