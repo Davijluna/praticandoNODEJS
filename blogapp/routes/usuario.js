@@ -86,16 +86,20 @@ router.get("/login", (req, res) => {
 router.post("/login", (req, res, next) => {
     passport.authenticate("local", {
       successRedirect: "/",
-      failureRedirect:"usuarios/login",
+      failureRedirect:"/usuarios/login",
       failureFlash: true
     })(req, res, next)
 })
 
 router.get("/logout", (req, res) => {
-  req.logout()
-  req.flash("success_msg", "Deslogado com sucesso!")
-  res.redirect("/")
-})
+  req.logout((err) => {
+    if(err) {
+      req.flash("error_msg", "Erro ao fazer logout" + err.message);
+    }
+  }); // Realiza o logout
+  req.flash("success_msg", "Deslogado com sucesso!");
+  res.redirect("/");
+});
 
 
 module.exports = router
