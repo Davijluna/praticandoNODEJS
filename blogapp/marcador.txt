@@ -27,7 +27,7 @@ Formuário de login #57
 Configurando o Passport #58
 Finalizando autenticação #59
 Controlando acesso #60
-Próxima aula Logout #61 ainda precisa de correção
+Próxima aula Logout #61 ainda precisa de correção voltando ao código
 
 
 
