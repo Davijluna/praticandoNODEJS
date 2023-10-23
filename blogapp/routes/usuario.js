@@ -93,10 +93,15 @@ router.post("/login", (req, res, next) => {
 })
 
 router.get("/logout", (req, res) => {
-  // ! req#logout requires a callback function VER ESSE ERRO !
-  req.logout()
-  req.flash("success_msg", "Deslogado com sucesso!");
-  res.redirect("/");
+  //  todo: nesta parte tive problemas pois o logout precisava de uma callback.
+  req.logout(function (err) {
+    if(err) {
+      res.status(500).send("Erro no logout")
+    } else {
+      req.flash("success_msg", "Deslogado com sucesso!");
+      res.redirect("/");
+    }
+  })
 });
 
 
