@@ -94,7 +94,7 @@ router.post("/login", (req, res, next) => {
 
 router.get("/logout", (req, res) => {
   //  todo: nesta parte tive problemas pois o logout precisava de uma callback.
-  req.logout(function (err) {
+  req.logout((err) => {
     if(err) {
       res.status(500).send("Erro no logout")
     } else {
