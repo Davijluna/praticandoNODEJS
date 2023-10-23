@@ -5,6 +5,7 @@ require("../models/Usuario")
 const Usuario = mongoose.model("usuarios")
 const bcrypt = require("bcryptjs")
 const passport = require("passport")
+const eAdmin = require('../helpers/eAdmin')
 
 router.get("/registro", (req, res) => {
   res.render("usuarios/registro")
@@ -92,11 +93,8 @@ router.post("/login", (req, res, next) => {
 })
 
 router.get("/logout", (req, res) => {
-  req.logout((err) => {
-    if(err) {
-      req.flash("error_msg", "Erro ao fazer logout" + err.message);
-    }
-  }); // Realiza o logout
+  // ! req#logout requires a callback function VER ESSE ERRO !
+  req.logout()
   req.flash("success_msg", "Deslogado com sucesso!");
   res.redirect("/");
 });
