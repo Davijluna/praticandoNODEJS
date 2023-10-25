@@ -30,7 +30,7 @@ Controlando acesso #60
 Próxima aula Logout #61 ainda precisa de correção voltando ao código
 
 
-
+REVER JEITO DE FAZER DEPLOY
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
 ##### TIVE PROBLEMAS PARA ENCERRAR AS PORTAS E PESQUISEI E CONSEGUI COM ESSES COMNANDOS.

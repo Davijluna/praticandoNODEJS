@@ -130,7 +130,6 @@ require("./config/auth")(passport)
         })
       })
 
-
   app.use('/admin', admin)
   app.use('/usuarios', usuarios) // criando o grupo de rotas para usuarios
 // Outros
