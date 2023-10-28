@@ -33,6 +33,8 @@ Próxima aula Logout #61 ainda precisa de correção voltando ao código
 REVER JEITO DE FAZER DEPLOY
 =====   REVISAR AS ROTAS PARA FINALIZAR O PROJETO =====
 
+rever parte para deploy
+
 ##### TIVE PROBLEMAS PARA ENCERRAR AS PORTAS E PESQUISEI E CONSEGUI COM ESSES COMNANDOS.
 
 netstat -tuln | grep 8081
